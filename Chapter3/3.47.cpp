@@ -23,61 +23,45 @@ int answer;
 int level;
 int scaleFactor;
 int calculationType;
-
 double rightAnswer;
 
-
 int scaleFactorGenerator(int);
-
 void calculationTypeGenerator(int);
 
 int main() {
 
-	
 	cout << "Enter your level (1 = beginner 2 = intermediete 3 = proffessional): ";
 	cin >> level;
 
     scaleFactor = scaleFactorGenerator(level);
 
-	void calculationTypeGenerator(int);
+	calculationTypeGenerator(int);
 	
 	srand(time(NULL));
-
 	firstNumber = rand() % scaleFactor;
-
 	secondNumber = rand() % scaleFactor;
 
 	cout << "Enter maths calculation type (1 - addition 2 - substraction 3 - multiplication 4 - division 5 - mix of them): ";
     cin >> calculationType;
 
-	calculationTypeGenerator(calculationType);
-
-	
+	calculationTypeGenerator(calculationType);	
 	cin >> answer;
 
 	if (answer == rightAnswer) {
-
 		cout << "Good Work!";
-	
 	}
 	else {
-	
 		while (answer != rightAnswer) {
-
 			cout << "No.Please try again\nAnswer: ";
 			cin >> answer;
-		
 		}
-		
 		cout << "Good Work!";
 	}
 
 	return 0;
-
 }
 
 int scaleFactorGenerator(int level) {
-
 	switch (level) {
 		case 1: 
 			scaleFactor = 10;
@@ -89,13 +73,10 @@ int scaleFactorGenerator(int level) {
 			scaleFactor = 1000;
 			break;
 	}
-
 	return scaleFactor;
 }
 
 void calculationTypeGenerator(int calculationType) {
-
-
 	if (calculationType == 5) {
 		calculationType = rand() % 4 + 1;
 	}
@@ -123,5 +104,4 @@ void calculationTypeGenerator(int calculationType) {
 		cout << "What is " << firstNumber << " / " << secondNumber << " ?\nAnswer: ";
 		break;
 	}
-
 }

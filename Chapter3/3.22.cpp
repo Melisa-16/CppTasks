@@ -4,11 +4,9 @@
 
 using namespace std;
 
-
 void squareMadeWithAsterisks(int);
 
 int main() {
-
 	int amountOfAsterisks;
 
 	cout << "Enter amount of asterisks: ";
@@ -20,13 +18,9 @@ int main() {
 }
 
 void squareMadeWithAsterisks(int amountOfAsterisks) {
-
 	for (int i = 1;i <= amountOfAsterisks;i++) {
-
 		for (int j = 1;j <= amountOfAsterisks;j++) {
-
 			cout << "* ";
-
 		}
 		cout << endl;
 	}

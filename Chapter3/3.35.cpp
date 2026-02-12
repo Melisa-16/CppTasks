@@ -9,22 +9,18 @@
 using namespace std;
 
 int main() {
+	srand(time(NULL));
+
+	const int MAXIMUM_REMAINDER = 10;
 
 	int firstNumber;
 	int secondNumber;
 	int rightAnswer;
 	int answer;
 
-	const int MAXIMUM_REMAINDER = 10;
-
-	srand(time(NULL));
-
 	firstNumber = rand() % MAXIMUM_REMAINDER;
-
 	secondNumber = rand() % MAXIMUM_REMAINDER;
-
 	rightAnswer = firstNumber * secondNumber;
-
 
 	cout << "What is " << firstNumber << " times " << secondNumber << " ?\nAnswer: ";
 	cin >> answer;
@@ -32,18 +28,13 @@ int main() {
 	if (answer == rightAnswer) {
 		cout << "Good Work!";
 	}
-
 	else {
-	
 		while (answer != rightAnswer) {
-
 			cout << "No.Please try again\nAnswer: ";
 			cin >> answer;
 		}
-		
 		cout << "Good Work!";
 	}
 	
 	return 0;
-
 }

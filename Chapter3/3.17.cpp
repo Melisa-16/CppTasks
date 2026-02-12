@@ -17,37 +17,28 @@ int main() {
 	const int SCALE_FACTOR = 10;
 	const int SCALE_FACTOR_ELEVEN = 11;
 	const int FIRST_NUMBER_FOR_SERIES = 3;
-	const int PARITY_CHECKER = 2;
+	const int MINIMUM_EVEN_NUMBER = 2;
 
-	for (int i = 1;i <= MAXIMUM_AMOUNT;i++) {
-		
+	for (int i = 1;i <= MAXIMUM_AMOUNT;i++) {	
 		int evenNumbersFromTwoToTen = 1 + rand() % SCALE_FACTOR;
 
-		if (evenNumbersFromTwoToTen % PARITY_CHECKER == 0) {
-
+		if (evenNumbersFromTwoToTen % MINIMUM_EVEN_NUMBER == 0) {
 			cout <<  evenNumbersFromTwoToTen <<"  ";
-		
 		}
 	}
 
 	cout << endl;
-
+	 
 	for (int i = 1;i <= MAXIMUM_AMOUNT;i++) {
-
-		int unevenNumberTillEleven = 1 + rand() % SCALE_FACTOR_ELEVEN;
+		int unevenNumberTillEleven = 1 + rand() % SCALE_FACTOR_ELEVEN;s
 
 		if (unevenNumberTillEleven >= FIRST_NUMBER_FOR_SERIES) {
-
-			if (unevenNumberTillEleven %  PARITY_CHECKER == 1) {
-
-				cout << unevenNumberTillEleven << "  ";
-			
+			if (unevenNumberTillEleven %  MINIMUM_EVEN_NUMBER == 1) {
+				cout << unevenNumberTillEleven << "  ";	
 			}
-
 		}
 
 	}
 
 	return 0;
-
 }

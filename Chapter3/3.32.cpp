@@ -15,26 +15,19 @@ int main() {
     cin >> firstInteger >> secondInteger;
 
     int greaterDivisor = greatestCommonDivisorFinder(firstInteger, secondInteger);
-
     cout <<"Greatest common divisor: " <<greaterDivisor;
 
     return 0;
 }
 
 int greatestCommonDivisorFinder(int firstNumber, int secondNumber) {
-
     int greaterCommonDivisor = 1;
 
     for (int i = 2;i <= secondNumber;i++) {
-
         if (firstNumber % i == 0 && secondNumber % i == 0) {
-
             if (i > greaterCommonDivisor) {
-
                 greaterCommonDivisor = i;
-
             }
-
         }
     }
 

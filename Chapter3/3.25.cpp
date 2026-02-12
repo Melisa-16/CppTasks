@@ -11,6 +11,9 @@
 
 using namespace std;
 
+void integerPartOfDivision(int, int);
+void remainderPartOfDivision(int, int);
+
 int main() {
 
 	int firstInteger;
@@ -20,25 +23,27 @@ int main() {
 	cin >> firstInteger;
 	cout << "Enter second integer number: ";
 	cin >> secondInteger;
+	cout << endl;
 
-	cout << endl << endl;
+	cout << "Integer part when " << firstInteger << " is divided to " << secondInteger << ": ";
+	integerPartOfDivision(firstInteger, secondInteger);
+	cout << endl;
 
-	int integerPartOfDivision ;
-
-	integerPartOfDivision = firstInteger / secondInteger;
-
-	cout <<"Integer part when "<< firstInteger <<" is divided to "<< secondInteger <<": "
-		 << integerPartOfDivision<<endl<<endl;
-
-
-	int remainderOfDivision;
-
-	remainderOfDivision = firstInteger % secondInteger;
-
-	cout << "Remainder when " << firstInteger << " is divided to " << secondInteger << ": "
-		<< remainderOfDivision<<endl<<endl;
-
+	cout << "Remainder when " << firstInteger << " is divided to " << secondInteger << ": ";
+	remainderPartOfDivision(firstInteger, secondInteger);
 
 	return 0;
+}
 
+void integerPartOfDivision(int firstIntegerNumber, int secondIntegerNumber) {
+	int integerPartOfDivision;
+	integerPartOfDivision = firstIntegerNumber / secondIntegerNumber;
+
+	cout << integerPartOfDivision;
+}
+void remainderPartOfDivision(int firstIntegerNumber, int secondIntegerNumber) {
+	int remainderOfDivision;
+	remainderOfDivision = firstIntegerNumber % secondIntegerNumber;
+
+	cout << remainderOfDivision;
 }

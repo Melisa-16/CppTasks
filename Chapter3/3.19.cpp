@@ -14,7 +14,6 @@ using namespace std;
 double hypotenuseOfRightAngleTriangle(double, double);
 
 int main() {
-
 	cout << "Right-angle triangle hypotenuse with sides 3 and 4 = "
 		<< hypotenuseOfRightAngleTriangle(3.0, 4.0)<<endl<<endl
 
@@ -23,14 +22,11 @@ int main() {
 
 		<< "Right-angle triangle hypotenuse with sides 8 and 15 = "
 		<< hypotenuseOfRightAngleTriangle(8.0, 15.0)<<endl<<endl;
-
-    
+  
 	return 0;
 }
 
 double hypotenuseOfRightAngleTriangle(double firstSide, double secondSide) {
-
 	double hypotenuse = sqrt( pow(firstSide, 2) + pow(secondSide, 2) );
-
 	return hypotenuse;
 }

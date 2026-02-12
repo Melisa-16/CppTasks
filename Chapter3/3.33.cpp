@@ -14,20 +14,16 @@ using namespace std;
 int qualityPoints(int);
 
 int main() {
-
 	int averageMark;
 	int studentPoints;
 
 	studentPoints = qualityPoints(averageMark);
-
 	cout << "Student's points: " << studentPoints;
 
 	return 0;
-
 }
 
 int qualityPoints(int averageMark) {
-
 	cout << "Enter average mark of student: ";
 	cin >> averageMark;
 
@@ -46,5 +42,4 @@ int qualityPoints(int averageMark) {
 	else {
 		return 0;
 	}
-
 }

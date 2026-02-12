@@ -20,35 +20,28 @@ int main() {
 
     cout << "Enter fisrt integer number: ";
     cin >> firstNumber;
-
     cout << "Enter second integer number: ";
     cin >> secondNumber;
 
-
     cout << "\nMin of " << firstNumber << " and " << secondNumber << " is " << minimum(firstNumber, secondNumber) << endl << endl;
-
 
     char firstChar;
     char secondChar;
 
     cout << "Enter first symbol: ";
     cin >> firstChar;
-
     cout << "Enter second symbol: ";
     cin >> secondChar;
 
     cout << "\nMin of '" << firstChar << "' and '" << secondChar << "' is '" << minimum(firstChar, secondChar) << "'" << endl << endl;
-
 
     float firstFloatNumber;
     float secondFloatNumber;
 
     cout << "Enter first floating number: ";
     cin >> firstFloatNumber;
-
     cout << "Enter second floating number: ";
     cin >> secondFloatNumber;
-
 
     cout << "\nMin of " << firstFloatNumber << " and " << secondFloatNumber << " is " << minimum(firstFloatNumber, secondFloatNumber) << endl;
 

@@ -4,11 +4,9 @@
 
 using namespace std;
 
-
 void squareMadeWithSymbols(int,char);
 
 int main() {
-
 	int amountOfSymbols;
 	char symbol;
 
@@ -21,17 +19,12 @@ int main() {
 	squareMadeWithSymbols(amountOfSymbols,symbol);
 
 	return 0;
-
 }
 
 void squareMadeWithSymbols(int amountOfSymbols,char symbol) {
-
 	for (int i = 1;i <= amountOfSymbols;i++) {
-
 		for (int j = 1;j <= amountOfSymbols;j++) {
-
 			cout << symbol << " ";
-
 		}
 		cout << endl;
 	}

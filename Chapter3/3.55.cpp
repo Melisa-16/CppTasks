@@ -7,9 +7,7 @@ using namespace std;
 inline void circleArea();
 
 int main() {
-
-    circleArea();
-    
+    circleArea();    
     return 0;
 }
 
@@ -24,6 +22,5 @@ inline void circleArea() {
     const double M_PI = 3.1415;
 
     areaOfCircle = M_PI * radius * radius;
-
     cout << "Area of the circle: " << areaOfCircle << endl;
 }

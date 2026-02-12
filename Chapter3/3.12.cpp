@@ -10,10 +10,7 @@ using namespace std;
 
 double calculateCharges(double);
 
-
 int main() {
-
-
     const int MAXIMUM_CARS_AMOUNT = 3;
 
     cout << "Car\t"
@@ -21,48 +18,32 @@ int main() {
         << "Payment" << endl;
 
     for (int car = 1; car <= MAXIMUM_CARS_AMOUNT; car++) {
-
         cout << car << "\t";
 
         double parkedHours;
-
         cin >> parkedHours;
 
         double payment = calculateCharges(parkedHours);
-
-
         cout << "\t" << fixed << setprecision(2) << payment << endl;
     }
-
 
     return 0;
 }
 
 double calculateCharges(double parkedHours) {
-
-
-    double paymentForParking;
-
     const int STANDARD_PARKING_HOURS = 3;
     const double MINIMUM_PAYMENT_FOR_THREE_HOURS = 2.0;
     const double OVERTIME_PAY = 0.5;
     const int DAYLY_PARKING_HOURS = 24;
     const int DAYLY_PARKING_PAYMENT = 10;
 
-    if (parkedHours <= STANDARD_PARKING_HOURS) {
+    double paymentForParking = MINIMUM_PAYMENT_FOR_THREE_HOURS;
 
-        paymentForParking = MINIMUM_PAYMENT_FOR_THREE_HOURS;
-
+    if (parkedHours > STANDARD_PARKING_HOURS) {
+        paymentForParking += (parkedHours - STANDARD_PARKING_HOURS) * OVERTIME_PAY;
     }
-    else {
-
-        paymentForParking = MINIMUM_PAYMENT_FOR_THREE_HOURS + (parkedHours - STANDARD_PARKING_HOURS) * OVERTIME_PAY;
-    }
-
     if (parkedHours == DAYLY_PARKING_HOURS) {
-
         paymentForParking = DAYLY_PARKING_PAYMENT;
-
     }
 
     return paymentForParking;

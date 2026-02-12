@@ -14,41 +14,30 @@
 using namespace std;
 
 int main() {
-
 	srand(time(NULL));
 
-	int number;
-	int userInputedNumber;
-
 	const int SCALE_FACTOR = 1000;
-	
+
+	int number;
 	number = 1 + rand() % SCALE_FACTOR;
 
+	int userInputedNumber;
+
 	cout << "My number is between 1 and 1000\nCan you guess it?\n";
-	
 	cout << "Enter your first guess\n";
 	cin >> userInputedNumber;
 
-
 	while (userInputedNumber != number) {
-
 		if (userInputedNumber < number) {
-
 			cout << "Your guess is too low.\nTry again: ";
-		
 		}
-		else {
-			
+		else {	
 			cout << "Your guess is too high.\nTry again: ";
-		
 		}
-
 		cin >> userInputedNumber;
-	
 	}
 
 	cout << "Cangratulations.You guessed the number";
 
 	return 0;
-
 }

@@ -20,37 +20,29 @@ int main() {
 
     cout << "Enter fisrt integer number: ";
     cin >> firstNumber;
-
     cout << "Enter second integer number: ";
     cin >> secondNumber;
 
-
     cout << "\nMax of " << firstNumber << " and " << secondNumber << " is " << maximum(firstNumber, secondNumber) << endl << endl;
-
 
     char firstChar;
     char secondChar;
 
     cout << "Enter first symbol: ";
     cin >> firstChar;
-
     cout << "Enter second symbol: ";
     cin >> secondChar;
 
     cout << "\nMax of '" << firstChar << "' and '" << secondChar << "' is '" << maximum(firstChar, secondChar) << "'" << endl << endl;
-
 
     float firstFloatNumber;
     float secondFloatNumber;
 
     cout << "Enter first floating number: ";
     cin >> firstFloatNumber;
-
     cout << "Enter second floating number: ";
     cin >> secondFloatNumber;
 
-
     cout << "\nMax of " << firstFloatNumber << " and " << secondFloatNumber << " is " << maximum(firstFloatNumber, secondFloatNumber) << endl;
-
     return 0;
 }

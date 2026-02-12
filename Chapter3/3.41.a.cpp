@@ -6,31 +6,25 @@
 using namespace std;
 
 int main() {
-
-	int firstFibonacciNumber;
-	int secondFibonacciNumber;
 	int maximumAmount;
 
 	cout << "Enter amount for fibonacci numbers: ";
 	cin >> maximumAmount;
 
-	firstFibonacciNumber = 0;
-	secondFibonacciNumber = 1;
+	int firstFibonacciNumber = 0;
+	int secondFibonacciNumber = 1;
 
 	cout << firstFibonacciNumber << "\n" << secondFibonacciNumber<<"\n";
 
 	for (int number = 3;number <= maximumAmount;number++) {
 
 		int fibonacciNumber;
-
 		fibonacciNumber = firstFibonacciNumber + secondFibonacciNumber;
 
 		cout << fibonacciNumber << "\n";
 		
 		firstFibonacciNumber = secondFibonacciNumber;
-
 		secondFibonacciNumber = fibonacciNumber;
-    
 	}
 
 	return 0;

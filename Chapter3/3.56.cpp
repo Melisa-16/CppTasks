@@ -6,40 +6,31 @@
 using namespace std;
 
 int tripleCallByValue(int count);
-
 void tripleByReference(int& cRef);
 
 int main() {
 
     int number;
-
     cout << "Enter number: ";
     cin >> number;
 
     cout << "Number before tripleCallByValue " << number
-
          << "\nReturned number by tripleCallByValue " << tripleCallByValue(number)
-
          << "\nNumber after tripleCallByValue " << number;
 
     cout << "\n\nNumber before tripleByReference " << number;
-   
-         tripleByReference(number);
+ 
+    tripleByReference(number);
 
     cout << "\nNumber after tripleByReference " << number << endl << endl;
 
-
     return 0;
-
 }
 
 int tripleCallByValue(int count) {
-
     return count * 3;
 }
 
 void tripleByReference(int& cRef) {
-
     cRef *= 3;
-
 }
