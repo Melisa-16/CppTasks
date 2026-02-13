@@ -27,7 +27,6 @@ int main() {
     int payedWorkersCounter[MAXIMUM_RANGES_AMOUNT] = { 0 };
     double payments[MAXIMUM_WORKERS_AMOUNT];
 
-
     for (int i = 0; i < MAXIMUM_WORKERS_AMOUNT; i++) {
         cout << "Enter weekly payment of worker " << i + 1 << ": ";
         cin >> payments[i];
