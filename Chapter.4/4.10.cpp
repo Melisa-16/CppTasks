@@ -46,15 +46,12 @@ int main() {
     const int EIGHTH_RANGE_MAXIMUM = 999;
 
     for (int i = 0; i < MAXIMUM_WORKERS_AMOUNT; i++) {
-
         double totalPayment = WEEKLY_PAYMENT + payments[i] * PERCENT_OF_WEEKLY_WORK;
-
         int index = (totalPayment / 100) - 2;
 
         if (index > 8) {
             index = 8;
         }
-
         ++payedWorkersCounter[index];
     }
 
@@ -63,6 +60,5 @@ int main() {
     for (int i = 0;i < MAXIMUM_RANGES_AMOUNT;i++) {
         cout << i + 1 << "\t\t\t" << payedWorkersCounter[i] << endl;
     }
-
     return 0;
 }
