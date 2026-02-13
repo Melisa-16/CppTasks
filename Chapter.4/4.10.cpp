@@ -1,11 +1,10 @@
 //Sellers receive $200 per week plus 9 percent of
-//that week's sales. For example, a salesperson with a gross weekly sale
+//that week's sales. For example, a salesperson with a weekly sale
 //of $5, 000 gets $200 plus
 //9 percent of the $5000:$650.
 //Write a program that determines
 //how many salesperson have received salaries in each of
 //the following ranges:
-
 //1. $200 - $299
 //2. $300 - $399
 //3. $400 - $499
@@ -15,7 +14,6 @@
 //7. $800 - $899
 //8. $900 - $999
 //9. $1000 and more
-
 
 #include <iostream>
 
@@ -31,10 +29,8 @@ int main() {
 
 
     for (int i = 0; i < MAXIMUM_WORKERS_AMOUNT; i++) {
-
-        cout << "Enter weekly payment of worker " << i + 1<< ": ";
+        cout << "Enter weekly payment of worker " << i + 1 << ": ";
         cin >> payments[i];
-
     }
 
     const int WEEKLY_PAYMENT = 200;
@@ -53,44 +49,18 @@ int main() {
 
         double totalPayment = WEEKLY_PAYMENT + payments[i] * PERCENT_OF_WEEKLY_WORK;
 
-        int index;
+        int index = (totalPayment / 100) - 2;
 
-        if (totalPayment <= FIRST_RANGE_MAXIMUM) {
-            index = 0;
-        }
-        else if (totalPayment <= SECOND_RANGE_MAXIMUM) {
-            index = 1;
-        }
-        else if (totalPayment <= THIRD_RANGE_MAXIMUM) {
-            index = 2;
-        }
-        else if (totalPayment <= FOURTH_RANGE_MAXIMUM) {
-            index = 3;
-        }
-        else if (totalPayment <= FIFTH_RANGE_MAXIMUM) {
-            index = 4;
-        }
-        else if (totalPayment <= SIXTH_RANGE_MAXIMUM) {
-            index = 5;
-        }
-        else if (totalPayment <= SEVENTH_RANGE_MAXIMUM) {
-            index = 6;
-        }
-        else if (totalPayment <= EIGHTH_RANGE_MAXIMUM) {
-            index = 7;
-        }
-        else {
+        if (index > 8) {
             index = 8;
         }
 
         ++payedWorkersCounter[index];
-
     }
 
     cout << "Range \t\tAmount of workers\n";
 
     for (int i = 0;i < MAXIMUM_RANGES_AMOUNT;i++) {
-
         cout << i + 1 << "\t\t\t" << payedWorkersCounter[i] << endl;
     }
 

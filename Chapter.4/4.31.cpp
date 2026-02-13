@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 void selectionSort(int[], int, int);
 
 int main() {
@@ -22,15 +21,11 @@ int main() {
 	
 	selectionSort(unsortedArray, ARRAY_SIZE, index);
 
-
 	cout << "\n\nSorted array: ";
 
 	for (int i = 0;i < ARRAY_SIZE;i++) {
 		cout << unsortedArray[i] << " ";
 	}
-
-
-
 	return 0;
 }
 
@@ -45,14 +40,10 @@ void selectionSort(int array[], int arraySize , int index) {
 	int minimumValue = array[minimumValueIndex];
 
 	for (int i = index;i < arraySize;i++) {
-
 		if (array[i] < minimumValue) {
-
 			minimumValueIndex = i;
 			minimumValue = array[i];
-
 		}
-
 	}
 
 	int temporaryPlace = array[index];
@@ -60,5 +51,4 @@ void selectionSort(int array[], int arraySize , int index) {
 	array[minimumValueIndex] = temporaryPlace;
 
 	return selectionSort(array,arraySize,index + 1);
-
 }

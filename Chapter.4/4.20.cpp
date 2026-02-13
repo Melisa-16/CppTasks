@@ -10,7 +10,6 @@
 //    Smokers - seats 1–5
 //    Non - smokers - seats 6–10
 
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -21,7 +20,6 @@ int main() {
 
     srand(time(NULL));
 
-
     const int MAXIMUM_AMOUNT_OF_PASSANGERS = 10;
 
     int comparment[MAXIMUM_AMOUNT_OF_PASSANGERS] = { 0 };
@@ -30,29 +28,23 @@ int main() {
     bool freeSeatAvailability;
 
     for (int count = 0;count < MAXIMUM_AMOUNT_OF_PASSANGERS;count++) {
-
         cout << "Enter 1 for 'smokers' and 2 for 'non-smokers'\n";
         cin >> identification;
 
         if (identification == 1) {
-
             seat = rand() % 5;
 
             while (comparment[seat] == 1) {
                 seat = rand() % 5;
             }
-
             comparment[seat]++;
-
         }
         else if (identification == 2) {
-
             seat = 5 + rand() % 5;
 
             while (comparment[seat] == 1) {
                 seat = 5 + rand() % 5;
             }
-
             comparment[seat]++;
         }
         else {

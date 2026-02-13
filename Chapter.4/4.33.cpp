@@ -4,10 +4,9 @@
 
 using namespace std;
 
-int linearSearch(int[], int);
+int linearSearch(int[], int, int);
 
 int searchKey;
-
 
 int main() {
 
@@ -15,41 +14,32 @@ int main() {
 
 	int a[ARRAY_SIZE];
 
-
 	for (int x = 0;x < ARRAY_SIZE;x++) {
-
 		a[x] = 2 * x;
 	}
 
-	cout << "Enter key of searching - integer number ";
+	cout << "Enter search key(integer number): ";
 	cin >> searchKey;
 
-	int result = linearSearch(a, ARRAY_SIZE);
+	int index = 0;
+	int result = linearSearch(a, ARRAY_SIZE, index);
 
 	if (result == -1) {
 		cout << "\nKey was not found";
 	}
 	else {
-		cout << searchKey << " was found in element " << result ;
+		cout << searchKey << " was found in element " << result;
 	}
-
-
 	return 0;
 }
 
-int linearSearch(int array[], int arraySize) {
-
-
-	for (int i = 0;i < arraySize;i++) {
-			
-		if (searchKey == array[i]) {
-			return i;
-		}
-
-		if (i == ( arraySize - 1 )) {
-			return -1;
-		}
+int linearSearch(int array[], int arraySize, int index) {
+	if (searchKey == array[index]) {
+		return index;
 	}
 
-	return linearSearch(array + 1, arraySize - 1);
+	if (index == (arraySize - 1)) {
+		return -1;
+	}
+	return linearSearch(array, arraySize, index + 1);
 }

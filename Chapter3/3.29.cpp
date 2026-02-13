@@ -32,7 +32,6 @@ int perfect(int number) {
             sum += i;
         }
     }
-
     if (sum == number) {
         perfectNumber = number;
     }

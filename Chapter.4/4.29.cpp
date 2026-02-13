@@ -19,14 +19,12 @@ int main() {
 	}
 
 	for (int i = 1;i < ARRAY_SIZE;i++) {
-
 		for (int j = ARRAY_SIZE;j < i;j++) {
 			if (i % j == 0) {
 				array[i] = 0;
 			}
 		}
 	}
-
 
 	for (int i = 1;i < ARRAY_SIZE;i++) {
 		cout << array[i] << " ";

@@ -38,6 +38,5 @@ int simpleNumberIdentifier(int number) {
 			return 0;
 		}
 	}
-
 	return number;
 }

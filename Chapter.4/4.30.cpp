@@ -18,7 +18,6 @@ int main() {
 
 	int positiveNumbers[POSITIVE_NUMBERS_AMOUNT] = { 10,34,678,547,223,4679,302,341 };
 
-
 	cout << "Initial array: \n";
 	
 	for (int i = 0;i < POSITIVE_NUMBERS_AMOUNT;i++) {
@@ -48,13 +47,10 @@ void bucketSort(int array[], int arraySize) {
 	int maximumOfPositiveNumbers = 0;
 
 	for (int i = 0;i < arraySize;i++) {
-
 		if (array[i] > maximumOfPositiveNumbers) {
 			maximumOfPositiveNumbers = array[i];
 		}
-
 	}
-
 	int digitsAmount = 0;
 
 	while (maximumOfPositiveNumbers > 0) {
@@ -62,24 +58,17 @@ void bucketSort(int array[], int arraySize) {
 		maximumOfPositiveNumbers /= 10;
 	}
 
-
 	//sorting array
 
 	int digitPlace = 1;
 
 	for (int solvingSteps = 0;solvingSteps < digitsAmount;solvingSteps++) {
-
-
 		for (int i = 0;i < BLOCKS_AMOUNT;i++) {
 			for (int j = 0;j < arraySize;j++) {
-
 				blocksArray[i][j] = 0;
-
 			}
 		}
-
 		for (int j = 0;j < arraySize;j++) {
-
 			int digit = (array[j] / digitPlace) % 10;
 			blocksArray[digit][j] = array[j];
 		}
@@ -88,18 +77,12 @@ void bucketSort(int array[], int arraySize) {
 
 		for (int i = 0;i < BLOCKS_AMOUNT;i++) {
 			for (int j = 0;j < arraySize;j++) {
-
 				if (blocksArray[i][j] != 0) {
-
 					array[sortedArrayIndex] = blocksArray[i][j];
 					sortedArrayIndex++;
-
 				}
-
 			}
 		}
-
 		digitPlace *= 10;
 	}
-
 }

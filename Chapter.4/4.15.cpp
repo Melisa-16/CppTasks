@@ -1,47 +1,40 @@
 //check if entered number is dublicated,if it is not so print it
 
-
 #include <iostream>
 
 using namespace std;
 
-int main() {
+void dublicatedElementFinder(double[], int);
 
+int main() {
 	const int ARRAY_SIZE = 20;
 
 	double x[ARRAY_SIZE];
 
+	dublicatedElementFinder(x, ARRAY_SIZE);
+	return 0;
+}
+
+void dublicatedElementFinder(double array[], int arraySize) {
 	cout << "Enter element: ";
-	cin >> x[0];
+	cin >> array[0];
 
-
-	for (int i = 1;i < ARRAY_SIZE;i++) {
-
+	for (int i = 1;i < arraySize;i++) {
 		cout << "Enter element: ";
-		cin >> x[i];
+		cin >> array[i];
 
-		double element = x[i];
+		double element = array[i];
 
 		bool dublicatedElementAvailability = false;
 
-
 		for (int j = 0;j < i;j++) {
-
-			if (x[j] == x[i]) {
-
+			if (array[j] == array[i]) {
 				dublicatedElementAvailability = true;
 				break;
-
 			}
 		}
-
 		if (dublicatedElementAvailability == false) {
-
-			cout << x[i] << "\n";
-
+			cout << array[i] << "\n";
 		}
-
 	}
-
-	return 0;
 }
