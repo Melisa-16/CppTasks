@@ -6,7 +6,6 @@ using namespace std;
 
 bool evenNumberChecker(int); 
 
-
 int main(){
 	int number;
 
@@ -18,10 +17,8 @@ int main(){
 	answer = evenNumberChecker(number);
 
 	cout << "\nAnswer: " << answer;
-
 	return 0;
 }
-
 bool evenNumberChecker(int number) {
 	if (number % 2 == 0) {
 		return 1;
