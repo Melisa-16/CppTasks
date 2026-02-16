@@ -25,16 +25,13 @@ int main() {
 	}
 
 	for (int i = MINIMUM_SIMPLE_NUMBER;i < ARRAY_SIZE;i++) {
-
 		if (array[i] == 1) {
-
 			for (int j = i + 1;j < ARRAY_SIZE;j++) {
 				if (j % i == 0) {
 					array[j] = 0;
 				}
 			}
 		}
-
 	}
 
 
