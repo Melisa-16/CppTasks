@@ -25,12 +25,10 @@ int main() {
 }
 
 bool multiple(int firstNumber, int secondNumber) {
-
     if (secondNumber % firstNumber == 0) {
         return true;
     }
     else {
         return false;
     }
-
 }
