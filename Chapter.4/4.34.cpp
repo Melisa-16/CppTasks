@@ -12,18 +12,13 @@ int main() {
 	int array[ARRAY_SIZE] = { 1,2,3,4,5,6 };
 
 	printArray(array,ARRAY_SIZE);
-
 	return 0;
 }
 
 void printArray(int array[], int arraySize) {
-
 	if (arraySize == 0) {
 		return;
 	}
-
 	cout << array[0]<<" ";
-
 	return printArray(array + 1,arraySize - 1);
-
 }
