@@ -132,7 +132,6 @@ void bubbleSort(int a[], int size) {
 }
 
 void printArray(const int a[], int size) {
-
     for (int j = 0;j < size;j++) {
         if (j % 20 == 0) {
             cout << endl;

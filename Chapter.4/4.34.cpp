@@ -11,7 +11,7 @@ int main() {
 	const int ARRAY_SIZE = 6;
 	int array[ARRAY_SIZE] = { 1,2,3,4,5,6 };
 
-	printArray(array,ARRAY_SIZE);
+	printArray(array, ARRAY_SIZE);
 
 	return 0;
 }
@@ -22,8 +22,7 @@ void printArray(int array[], int arraySize) {
 		return;
 	}
 
-	cout << array[0]<<" ";
+	cout << array[0] << " ";
 
-	return printArray(array + 1,arraySize - 1);
-
+	return printArray(array + 1, arraySize - 1);
 }

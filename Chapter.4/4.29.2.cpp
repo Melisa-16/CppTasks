@@ -17,7 +17,6 @@ int main() {
 	const int ARRAY_SIZE = 1000;
 	const int MINIMUM_SIMPLE_NUMBER = 2;
 
-
 	int array[1000];
 
 	for (int i = 0;i < ARRAY_SIZE;i++) {
@@ -25,9 +24,7 @@ int main() {
 	}
 
 	for (int i = MINIMUM_SIMPLE_NUMBER;i < ARRAY_SIZE;i++) {
-
 		if (array[i] == 1) {
-
 			for (int j = i + 1;j < ARRAY_SIZE;j++) {
 				if (j % i == 0) {
 					array[j] = 0;
@@ -37,10 +34,8 @@ int main() {
 
 	}
 
-
 	for (int i = 1;i < ARRAY_SIZE;i++) {
 		cout << array[i] << " ";
 	}
-
 	return 0;
 }
