@@ -19,13 +19,11 @@ int main() {
 	int positiveNumbers[POSITIVE_NUMBERS_AMOUNT] = { 10,34,678,547,223,4679,302,341 };
 
 	cout << "Initial array: \n";
-	
 	for (int i = 0;i < POSITIVE_NUMBERS_AMOUNT;i++) {
 		cout << positiveNumbers[i] << " ";
 	}
 
 	cout << endl;
-
 	bucketSort(positiveNumbers, POSITIVE_NUMBERS_AMOUNT);
 
 	cout << "\nSorted array:\n";
@@ -33,14 +31,10 @@ int main() {
 	for (int i = 0;i < POSITIVE_NUMBERS_AMOUNT;i++) {
 		cout << positiveNumbers[i] << " ";
 	}
-	
 	cout << endl ;
 	return 0;
-
 }
-
 void bucketSort(int array[], int arraySize) {
-
 	int blocksArray[BLOCKS_AMOUNT][POSITIVE_NUMBERS_AMOUNT] = { 0 };
 
 	//finding maximum number's digits amount 

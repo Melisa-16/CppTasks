@@ -22,7 +22,6 @@ int main() {
 	for (int i = 0;i < ARRAY_SIZE;i++) {
 		array[i] = 1;
 	}
-
 	for (int i = MINIMUM_SIMPLE_NUMBER;i < ARRAY_SIZE;i++) {
 		if (array[i] == 1) {
 			for (int j = i + 1;j < ARRAY_SIZE;j++) {
@@ -31,9 +30,11 @@ int main() {
 				}
 			}
 		}
-
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> d7ca4f6c465c5535d4fad71f5840232469884e47
 	for (int i = 1;i < ARRAY_SIZE;i++) {
 		cout << array[i] << " ";
 	}
