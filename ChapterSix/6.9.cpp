@@ -74,7 +74,9 @@ int main() {
 	date3.print();
 	cout << endl;
 
-	for (int i = 1;i < 5;i++) {
+	const int DAYS_TO_ADVANCE = 5;
+	
+	for (int i = 1;i < DAYS_TO_ADVANCE;i++) {
 		date3.nextDay();
 		date3.print();
 		cout << endl;
