@@ -23,7 +23,7 @@ IntegerSet IntegerSet::unionOfIntegerSet(IntegerSet secondSet) {
 	IntegerSet result;
 	
 	for (int i = 0;i < ARRAY_SIZE;i++) {
-		if (integersSetArray[i] == 1 || secondSet.integersSetArray[i]) {
+		if (integersSetArray[i] == 1 || secondSet.integersSetArray[i] == 1) {
 			result.integersSetArray[i] = 1;
 		}
 	}
@@ -34,7 +34,7 @@ IntegerSet IntegerSet::interestionOfIntegerSets(IntegerSet secondSet) {
 	IntegerSet result;
 
 	for (int i = 0;i < ARRAY_SIZE;i++) {
-		if (integersSetArray[i] == 1 && secondSet.integersSetArray[i]) {
+		if (integersSetArray[i] == 1 && secondSet.integersSetArray[i] == 1) {
 			result.integersSetArray[i] = 1;
 		}
 	}
