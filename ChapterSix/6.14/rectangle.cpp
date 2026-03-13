@@ -146,8 +146,10 @@ void Rectangle::draw() {
     double maximumY = maximum(y1, y2, y3, y4);
     double minimumY = minimum(y1, y2, y3, y4);
 
-    for (int y = 0;y < 25;y++) {
-        for (int x = 0;x < 25;x++) {
+    const int BOARD_SIZE = 25;
+    
+    for (int y = 0;y < BOARD_SIDE;y++) {
+        for (int x = 0;x < BOARD_SIZE;x++) {
 
             if ((x >= minimumX && x <= maximumX && y == minimumY) ||
                 (x >= minimumX && x <= maximumX && y == maximumY) ||
