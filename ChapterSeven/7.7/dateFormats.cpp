@@ -26,7 +26,7 @@ Date::Date(string monthName, int d, int y) {
 
     for (int i = 0; i < 12; i++) {
         if (months[i] == monthName) {
-            month = i + 1;
+            month = i;
             break;
         }
     }
@@ -41,5 +41,5 @@ void Date::secondDateFormat() {
 }
 
 void Date::thirdDateFormat() {
-    cout << months[month - 1] << " " << day << ", " << year << endl;
+    cout << months[month] << " " << day << ", " << year << endl;
 }
