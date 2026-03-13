@@ -46,15 +46,15 @@ void DateAndTime::printStandard() {
 void DateAndTime::tick() {
 	second++;
 
-	if (second >= 60) {
+	if (second = 60) {
 		second = 0;
 		minute++;
 	}
-	 if (minute >= 60) {
+	 if (minute = 60) {
 		minute = 0;
 		hour++;
 	}
-	if (hour >= 24) {
+	if (hour = 24) {
 		second = 0;
 		minute = 0;
 		hour = 0;
