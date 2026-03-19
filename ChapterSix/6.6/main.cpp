@@ -4,9 +4,8 @@
 using namespace std;
 
 int main() {
-
-	complex firstComplexNumber(3, 4);
-	complex secondComplexNumber(5, 6);
+	Complex firstComplexNumber(3, 4);
+	Complex secondComplexNumber(5, 6);
 
 	cout << "First Complex Number: ";
 	firstComplexNumber.print();
@@ -15,15 +14,16 @@ int main() {
 	secondComplexNumber.print();
 
 	cout << endl;
-	complex result;
+
+	Complex resultAdd = firstComplexNumber.adding(secondComplexNumber);
 	cout << "Adding: ";
-	result.adding(firstComplexNumber, secondComplexNumber);
+	resultAdd.print();
 
 	cout << endl;
+
+	Complex resultSub = firstComplexNumber.substraction(secondComplexNumber);
 	cout << "Substraction: ";
+	resultSub.print();
 
-	result.substraction(firstComplexNumber, secondComplexNumber);
-
-	
 	return 0;
 }

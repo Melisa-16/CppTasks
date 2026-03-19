@@ -3,24 +3,27 @@
 
 using namespace std;
 
-complex::complex(float number1, float number2) {
+Complex::Complex(float number1, float number2) {
 	realPart = number1;
 	imaginaryPart = number2;
 }
 
-void complex::adding(complex firstNumber,complex secondNumber) {
-	float answerRealPart = firstNumber.realPart + secondNumber.realPart;
-	float answerImaginaryPart = firstNumber.imaginaryPart + secondNumber.imaginaryPart;
+Complex Complex::adding(Complex secondNumber) {
+	float answerRealPart = realPart + secondNumber.realPart;
+	float answerImaginaryPart = imaginaryPart + secondNumber.imaginaryPart;
 
-	cout << "(" << answerRealPart << "," << answerImaginaryPart << ")";
+	Complex result(answerRealPart, answerImaginaryPart);
+	return result;
 }
 
-void complex::substraction(complex firstNumber, complex secondNumber) {
-	float answerRealPart = secondNumber.realPart - firstNumber.realPart;
-	float answerImaginaryPart =  secondNumber.imaginaryPart - firstNumber.imaginaryPart;
+Complex Complex::substraction(Complex secondNumber) {
+	float answerRealPart = realPart - secondNumber.realPart;
+	float answerImaginaryPart = imaginaryPart - secondNumber.imaginaryPart;
 
-	cout << "(" << answerRealPart << "," << answerImaginaryPart << ")";
+	Complex result(answerRealPart, answerImaginaryPart);
+	return result;
 }
-void complex::print() {
-	cout << "(" <<realPart << "," << imaginaryPart << ")";
+
+void Complex::print() {
+	cout << "(" << realPart << "," << imaginaryPart << ")";
 }
