@@ -15,7 +15,7 @@ void IntegerSet::insertElement(int k) {
 }
 void IntegerSet::deleteElement(int m) {
 	if (m >= 0 && m < ARRAY_SIZE) {
-		integersSetArray[m] = 1;
+		integersSetArray[m] = 0;
 	}
 }
 
