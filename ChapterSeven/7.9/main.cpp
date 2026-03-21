@@ -1,5 +1,5 @@
 #include <iostream>
-#include "IntegerSet.h";
+#include "IntegerSet.h"
 
 using namespace std;
 
