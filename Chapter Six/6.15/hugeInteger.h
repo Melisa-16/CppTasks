@@ -8,8 +8,8 @@ private:
 public:
 	void inputHugeInteger();
 	void outputHugeInteger();
-	void addHugeIntegers(HugeInteger, HugeInteger);
-	void substractHugeIntegers(HugeInteger, HugeInteger);
+	HugeInteger addHugeIntegers(HugeInteger);
+	HugeInteger substractHugeIntegers(HugeInteger);
 
 	bool isEqualTo(HugeInteger);
 	bool isNotEqualTo(HugeInteger);

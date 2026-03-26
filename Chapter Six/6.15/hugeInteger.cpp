@@ -1,12 +1,35 @@
 #include <iostream>
+#include <string>
 #include "hugeInteger.h"
 
 using namespace std;
 
 void HugeInteger::inputHugeInteger() {
-	for (int i = 0;i < ARRAY_SIZE;i++) {
-		cout << "Enter " << i + 1 << " element: ";
-		cin >> hugeIntegerArray[i];
+	string inputNumber;
+	cout << "Enter a number (up to 40 digits): ";
+	cin >> inputNumber;
+
+	// Clear the array first
+	for (int i = 0; i < ARRAY_SIZE; i++) {
+		hugeIntegerArray[i] = 0;
+	}
+
+	// Fill the array from the right
+	int inputLength = inputNumber.length();
+	if (inputLength > ARRAY_SIZE) {
+		cout << "Number too big! Only the last 40 digits will be used.\n";
+		inputLength = ARRAY_SIZE;
+	}
+
+	for (int i = 0; i < inputLength; i++) {
+		char c = inputNumber[inputLength - 1 - i];
+		if (c >= '0' && c <= '9') {
+			hugeIntegerArray[ARRAY_SIZE - 1 - i] = c - '0';
+		}
+		else {
+			cout << "Invalid character in number. Treating as 0.\n";
+			hugeIntegerArray[ARRAY_SIZE - 1 - i] = 0;
+		}
 	}
 }
 void HugeInteger::outputHugeInteger() {
@@ -14,21 +37,21 @@ void HugeInteger::outputHugeInteger() {
 		cout << hugeIntegerArray[i]<<" ";
 	}
 }
-void HugeInteger::addHugeIntegers(HugeInteger firstArray,HugeInteger secondArray) {
-	long long sum = 0;
-
+HugeInteger HugeInteger::addHugeIntegers(HugeInteger secondArray) {
+	HugeInteger result;
+	
 	for (int i = 0;i < ARRAY_SIZE;i++) {
-		sum = firstArray.hugeIntegerArray[i] + secondArray.hugeIntegerArray[i];
-		cout << "Sum of " << i + 1 <<" elements from each array = "<<sum;
+		result.hugeIntegerArray[i] = hugeIntegerArray[i] + secondArray.hugeIntegerArray[i];
 	}
+	return result;
 }
-void HugeInteger::substractHugeIntegers(HugeInteger firstArray, HugeInteger secondArray) {
-	long long substraction = 0;
+HugeInteger HugeInteger::substractHugeIntegers(HugeInteger secondArray) {
+	HugeInteger result;
 
 	for (int i = 0;i < ARRAY_SIZE;i++) {
-		substraction = firstArray.hugeIntegerArray[i] - secondArray.hugeIntegerArray[i];
-		cout << "Substraction of " << i + 1 << " elements from each array = " << substraction;
+		result.hugeIntegerArray[i] = hugeIntegerArray[i] - secondArray.hugeIntegerArray[i];
 	}
+	return result;
 }
 
 bool HugeInteger::isEqualTo(HugeInteger secondArray) {
