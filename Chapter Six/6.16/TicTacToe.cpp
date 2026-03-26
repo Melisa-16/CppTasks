@@ -37,12 +37,37 @@ int TicTacToe::winnerChecker() {
 		}
 	}
 
-	if (board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] != 0) {
-		return board[0][0];
-	}
-	if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] != 0) {
-		return board[0][2];
-	}
+	bool mainDiagonalWin = true;
+    bool secondDiagonalWin = true;
+
+    int mainDiagonalFirstElement = board[0][0];       
+    int secondDiagonalFirstElement = board[0][BOARD_SIZE-1];   
+
+    if (mainDiagonalFirstElement == 0) {
+        mainDiagonalWin = false;
+    }    
+    if (secondDiagonalFirstElement == 0) {
+        secondDiagonalWin = false;
+    }
+
+    for (int j = 1; j < BOARD_SIZE; j++) {
+        if (board[j][j] != mainDiagonalFirstElement) {
+            mainDiagonalWin = false;
+        }
+        if (board[j][BOARD_SIZE - 1 - j] != secondDiagonalFirstElement) {
+            secondDiagonalWin = false;
+        }
+    }
+
+    if (mainDiagonalWin) {
+        return mainDiagonalFirstElement;
+    }
+    
+    if (secondDiagonalWin) {
+        return secondDiagonalFirstElement;
+    }
+
+
 
 	return 0;
 }
