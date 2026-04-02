@@ -6,7 +6,8 @@ using namespace std;
 
 class Point {
 private:
-    float x, y; 
+    float x;
+    float y; 
 public:
     Point(float = 0, float = 0);
 
@@ -14,7 +15,6 @@ public:
 
     float getX() const;
     float getY() const;
-
 };
 
 #endif
