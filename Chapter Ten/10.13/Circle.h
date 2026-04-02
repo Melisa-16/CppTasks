@@ -1,14 +1,16 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
-class Circle {
+#include "Shape.h"
+
+class Circle:public Shape{
 private:
 	double radius;
 	int x;
 	int y;
 public:
 	Circle(int, int, double);
-	double area();
+	double area() override;
 	double circumference();
 
 	double getRadius();
@@ -19,7 +21,7 @@ public:
 	void setX(int);
 	void setY(int);
 
-	void print();
-	void draw(char);
+	void print() override;
+	void draw(char) override;
 };
 #endif
