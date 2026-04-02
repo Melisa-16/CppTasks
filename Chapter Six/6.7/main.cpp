@@ -4,41 +4,38 @@
 using namespace std;
 
 int main() {
+    rational firstFraction(5, 6);
+    rational secondFraction(7, 8);
 
     cout << "First fraction: ";
-    rational obj(5, 6);
-    obj.printingAsFraction();
+    firstFraction.printingAsFraction();
     cout << " (";
-    obj.printingAsFloatNumber();
-    cout <<")"<< endl;
+    firstFraction.printingAsFloatNumber();
+    cout << ")" << endl;
 
     cout << "Second fraction: ";
-    rational obj2(7, 8);
-    obj2.printingAsFraction();
+    secondFraction.printingAsFraction();
     cout << " (";
-    obj2.printingAsFloatNumber();
-    cout << ")"<<endl;
+    secondFraction.printingAsFloatNumber();
+    cout << ")" << endl;
 
-    rational result;
+    cout << "\nAddition of first and second: ";
+    rational firstResult = firstFraction.adding(secondFraction);
+    firstResult.printingAsFraction();
 
-    cout << "\nAdditioning second fraction to first : ";
-    result.adding(obj, obj2);
-    result.printingAsFraction();
+    cout << "\nSubtraction of second from first: ";
+    rational secondResult = firstFraction.subtraction(secondFraction);
+    secondResult.printingAsFraction();
+
+    cout << "\nMultiplication of first and second: ";
+    rational thirdResult = firstFraction.multiplying(secondFraction);
+    thirdResult.printingAsFraction();
+
+    cout << "\nDivision of first by second: ";
+    rational fourthResult = firstFraction.division(secondFraction);
+    fourthResult.printingAsFraction();
 
     cout << endl;
-    cout << "Substracting second fraction from first: ";
-    result.substraction(obj, obj2);
-    result.printingAsFraction();
-
-    cout << endl;
-    cout << "Multiplying two fraction: ";
-    result.multiplying(obj, obj2);
-    result.printingAsFraction();
-
-    cout << endl;
-    cout << "Dividing first fraction to second: ";
-    result.division(obj, obj2);
-    result.printingAsFraction();
 
     return 0;
 }
