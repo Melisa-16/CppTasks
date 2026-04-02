@@ -9,7 +9,7 @@ public:
     rational(int = 1, int = 1);
 
     rational adding(rational);
-    rational substraction(rational);
+    rational subtraction(rational);
     rational multiplying(rational);
     rational division(rational);
 
