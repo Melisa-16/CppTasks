@@ -3,18 +3,21 @@
 
 class rational {
 private:
-	int numerator;
-	int denominator;
+    int numerator;
+    int denominator;
 public:
-	rational(int = 1,int = 1);
-	void adding(rational, rational);
-	void simplify(int,int,int);
-	void substraction(rational,rational);
-	void multiplying(rational, rational);
-	void division(rational, rational);
-	void printingAsFraction();
-	void printingAsFloatNumber();
+    rational(int = 1, int = 1);
 
-	int maximumDividerFinder(int, int);
+    rational adding(rational);
+    rational subtraction(rational);
+    rational multiplying(rational);
+    rational division(rational);
+
+    void printingAsFraction();
+    void printingAsFloatNumber();
+
+    void simplify(int, int, int);
+    int maximumDividerFinder(int, int);
 };
+
 #endif

@@ -5,8 +5,13 @@ using namespace std;
 
 //constructor
 rational::rational(int number1, int number2) {
+	if(number2 == 0) {
+		cout<<"Denominator can not be zero\n";
+	}
+	else {
     int commonDivider = maximumDividerFinder(number1,number2);
 	simplify(number1, number2, commonDivider);
+	}
 };
 
 //printing
@@ -37,53 +42,46 @@ void rational::simplify(int firstNumber,int secondNumber,int maximumDivider) {
 };
 
 //arithmetic
-void rational::adding(rational firstFraction, rational secondFraction) {
-	int  answerNumerator;
+rational rational::adding(rational secondFraction) {
+    int answerNumerator;
+    int answerDenominator;
+
+    if (denominator == secondFraction.denominator) {
+        answerNumerator = numerator + secondFraction.numerator;
+        answerDenominator = denominator;
+    }
+    else {
+        answerNumerator = (numerator * secondFraction.denominator) + 
+                          (secondFraction.numerator * denominator);
+        answerDenominator = denominator * secondFraction.denominator;
+    }
+
+    return rational(answerNumerator, answerDenominator);
+}
+
+rational rational::subtraction(rational secondFraction) {
+	int answerNumerator;
 	int answerDenominator;
 
-	if (firstFraction.denominator == secondFraction.denominator) {
-		answerNumerator = firstFraction.numerator + secondFraction.numerator;
-		answerDenominator = firstFraction.denominator;
+	if (denominator == secondFraction.denominator) {
+		answerNumerator = numerator - secondFraction.numerator;
+		answerDenominator = denominator;
 	}
 	else {
-		answerNumerator = (firstFraction.numerator * secondFraction.denominator) + (secondFraction.numerator * firstFraction.denominator);
-		answerDenominator = firstFraction.denominator * secondFraction.denominator;
+		answerNumerator = (numerator * secondFraction.denominator) - (secondFraction.numerator * denominator);
+		answerDenominator = denominator * secondFraction.denominator;
 	}
-	
-	int commonDivider = maximumDividerFinder(answerNumerator, answerDenominator);
-	simplify(answerNumerator, answerDenominator, commonDivider);
-
+    return rational(answerNumerator, answerDenominator);
 }
 
-void rational::substraction(rational firstFraction, rational secondFraction) {
-	int  answerNumerator;
-	int answerDenominator;
-
-	if (firstFraction.denominator == secondFraction.denominator) {
-		answerNumerator = firstFraction.numerator - secondFraction.numerator;
-		answerDenominator = firstFraction.denominator;
-	}
-	else {
-		answerNumerator = (firstFraction.numerator * secondFraction.denominator) - (secondFraction.numerator * firstFraction.denominator);
-		answerDenominator = firstFraction.denominator * secondFraction.denominator;
-	}
-
-	int commonDivider = maximumDividerFinder(answerNumerator, answerDenominator);
-	simplify(answerNumerator, answerDenominator, commonDivider);
+rational rational::multiplying(rational secondFraction) {
+	int answerNumerator = numerator * secondFraction.numerator;
+	int answerDenominator = denominator * secondFraction.denominator;
+    return rational(answerNumerator, answerDenominator);
 }
 
-void rational::multiplying(rational firstFraction, rational secondFraction) {
-	int answerNumerator = firstFraction.numerator * secondFraction.numerator;
-	int answerDenominator = firstFraction.denominator * secondFraction.denominator;
-
-	int commonDivider = maximumDividerFinder(answerNumerator, answerDenominator);
-	simplify(answerNumerator, answerDenominator, commonDivider);
-}
-
-void rational::division(rational firstFraction, rational secondFraction) {
-	int answerNumerator = firstFraction.numerator * secondFraction.denominator;
-	int answerDenominator = firstFraction.denominator * secondFraction.numerator;
-
-	int commonDivider = maximumDividerFinder(answerNumerator, answerDenominator);
-	simplify(answerNumerator, answerDenominator, commonDivider);
+rational rational::division(rational secondFraction) {
+	int answerNumerator = numerator * secondFraction.denominator;
+	int answerDenominator = denominator * secondFraction.numerator;
+    return rational(answerNumerator, answerDenominator);
 }
