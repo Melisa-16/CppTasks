@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first page</title>
+</head>
+<body>
+  <h1 align = "center"><i><u>My first Page</u></i></h1>
+  <table border="1" cellspacing="0" align = "center">
+    <caption style="text-align: left" ><p><b>My first Table:</b></p></caption>
+    <tr>
+      <td><p style ="color:red"><b>Testing table usage</b></p></td>
+      <td colspan="4"  rowspan="2"><img src="strawberry.jpg" alt ="Image of strawberry" width="300" height="200" style="margin: 10px;"></td>
+    </tr>
+    <tr>
+      <td height="150">
+        <p>Here I have some links</p>
+          <table border="1">
+            <tr>
+              <td><a href = "https://en.wikipedia.org/wiki/Berry">Berry</a></td>
+              <td>https://en.wikipedia.org/wiki/Berry</td>
+            </tr>
+            <tr>
+              <td><a href = "https://en.wikipedia.org/wiki/Strawberry">Strawberry</a></td>
+              <td>https://en.wikipedia.org/wiki/Strawberry</td>
+            </tr>
+            <tr height = 21>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td colspan = 3>
+        <ul>
+          <li><i>Creating my first list</i></li>
+          <li style="color:green">The second item</li>
+          <li><del>Then third item</del></li>
+        </ul>
+      </td>
+      <td>
+        <ol>
+          <li>Numbers</li>
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+      </td>
+    </tr>
+    <tr height="30">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><hr width="50%" color="red" size="3" align="left"></td>
+    </tr>
+    <td  valign="top">
+      <img src="strawberry.jpg" alt="Image of strawberry" width="200" height="100">
+    </td>
+    <td bgcolor="red"></td>
+    <td></td>
+    <td></td>
+    <td>
+
+      <form>
+    <table>
+      <tr>
+        <td><label for="FirstName">First name*</label></td>
+        <td><input type="text" name="firstName" id="FirstName" required size="15"></td>
+      </tr>
+
+      <tr>
+        <td><label for="LastName">Last name*</label></td>
+        <td><input type="text" name="lastName" id="LastName" required size="15"></td>
+      </tr>
+
+      <tr>
+        <td><label for="Email">Email<br>address*</label></td>
+        <td><input type="email" name="email" id="Email" required size="15"></td>
+      </tr>
+
+      <tr>
+        <td><label for="phone">Phone<br>number*</label></td>
+        <td><input type="tel" name="phone" id="phone" required size="15"></td>
+      </tr>
+
+      <tr valign="top">
+        <td>Color</td>
+        <td>
+          <input type="radio" name="color" value="White" id="white" size="15"><label for="white">White</label><br>
+          <input type="radio" name="color" value="Red" id="red" size="15"><label for="red">Red</label><br>
+          <input type="radio" name="color" value="Green" id="green" size="15"><label for="green">Green</label><br>
+          <input type="radio" name="color" value="Black" id="black" size="15"><label for="black">Black</label>
+        </td>
+      </tr>
+
+    
+      <tr valign="top">
+        <td>Fruit</td>
+        <td>
+          <input type="checkbox" name="fruit" value="Orange" id="Orange" size="15"><label for="Orange">Orange</label><br>
+          <input type="checkbox" name="fruit" value="Apple" id="Apple" size="15"><label for="Apple">Apple</label><br>
+          <input type="checkbox" name="fruit" value="Peach" id="Peach" size="15"><label for="Peach">Peach</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="comments">Comments*</label></td>
+        <td><textarea id="comments" name="comments"  placeholder="Enter text here..." rows="3" cols="15" required></textarea></td>
+      </tr>
+
+      <tr>
+        <td><label for="pets">Any pets?</label></td>
+        <td>
+          <select id="pets" name="pets">
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="none">None</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Submit Form"></td>
+      </tr>
+    </table>
+</form>
+    </td>
+  </table>
+</body>
+</html>
